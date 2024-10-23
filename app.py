@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Load the dataset globally
 DATASET_PATH = r'sales_data_sample.csv'  # Using a raw string
-def load_and_clean_data():
+def load_and_clean_data(): 
     try:
         data = pd.read_csv(DATASET_PATH, encoding='ISO-8859-1')
         
