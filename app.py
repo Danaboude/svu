@@ -29,11 +29,8 @@ def load_and_clean_data():
 
 data = load_and_clean_data()
 
-@app.route('/')
-def index():
-    return render_template('index.html')
 
-@app.route('/analyze')
+@app.route('/')
 def analyze():
     try:
         if data is None:
