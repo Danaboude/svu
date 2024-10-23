@@ -28,9 +28,7 @@ def load_and_clean_data():
         return None
 
 data = load_and_clean_data()
-@app.route('/health')
-def health_check():
-    return "Healthy", 200
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -107,5 +105,4 @@ def analyze():
         return render_template('error.html', error=str(e))
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 8000))  # Use the PORT environment variable
-    app.run(debug=False, port=port)
+    app.run(debug=False,host='0.0.0.0',port='8000')
